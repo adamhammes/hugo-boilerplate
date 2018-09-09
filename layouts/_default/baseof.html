@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>{{ block "title" . }}{{ end }}</title>
 
-    {{ $inlineCSS := resources.Get "css/inline.scss" | resources.ToCSS | resources.Minify }}
+    {{ $inlineCSS := resources.Get "css/inline.css" | resources.Minify }}
     <style>{{ $inlineCSS.Content | safeCSS }}</style>
 </head>
 
