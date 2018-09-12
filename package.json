@@ -1,0 +1,11 @@
+{
+  "name": "hugo-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:adamhammes/hugo-boilerplate.git",
+  "author": "Adam Hammes <adam@hammes.io>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "hugo serve -D"
+  }
+}
