@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>{{ block "title" . }}{{ end }}</title>
 
-    {{ $inlineCSS := resources.Get "css/inline.css" | resources.Minify }}
-    <style>{{ $inlineCSS.Content | safeCSS }}</style>
+    <link rel="stylesheet" href="{{ (index .Site.Data.manifest "main_styles.css") | relURL }}" />
+    {{ $inlineStylesFileName := (index .Site.Data.manifest "inline_styles.css") | relURL }}
+    {{ $inlineStylesFilePath := print "static" ($inlineStylesFileName) }}
+
+    <style>{{ $inlineStylesFilePath | readFile | safeCSS }}</style>
+
 </head>
 
 <body>

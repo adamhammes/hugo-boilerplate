@@ -3,3 +3,9 @@ public/
 
 # Asset cache
 resources/
+
+node_modules/
+
+# Webpack output
+static/
+data/manifest.json
